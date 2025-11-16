@@ -6,5 +6,6 @@ def home(request):
     completedTask = Task.objects.filter(is_completed=True)
     context = {
         'tasks':tasks,
+        'completedTask':completedTask,
     }
     return render(request,'home.html',context)
